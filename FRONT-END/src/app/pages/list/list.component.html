@@ -1,0 +1,32 @@
+<mat-card class="list">
+  <mat-form-field class="search" appearance="outline">
+    <mat-label>Pesquisar</mat-label>
+    <input
+     [(ngModel)]="searchText"
+     matInput type="text"
+     autocomplete="off"
+     >
+  </mat-form-field>
+  <table class="table" matSort (matSortChange)="sortData($event)">
+    <tr>
+      <th mat-sort-header="name"> Nome </th>
+      <th mat-sort-header="email"> Email </th>
+      <th mat-sort-header="phone"> Telefone </th>
+    </tr>
+
+    <tr class="table__row" *ngFor="let person of pageSlice | search: searchText">
+      <td class="name">{{person.name}} </td>
+      <td >{{person.email}} </td>
+      <td >{{person.phone}} </td>
+    </tr>
+  </table>
+    
+    <mat-paginator class="offer-list__toolbar__paginator"
+    [length]="sortedData.length"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    (page)="onPageChange($event)"
+    >
+    </mat-paginator>
+    <a href="" [routerLink]="['']">Voltar</a>
+</mat-card>

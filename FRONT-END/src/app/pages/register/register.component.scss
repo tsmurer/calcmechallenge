@@ -1,0 +1,63 @@
+.register {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    & button {
+        width: 100%;
+    }
+
+    & a {
+        margin-top: 10px;
+        color: #000;
+    }
+}
+
+
+
+// .registered-list {
+//     max-height: 100vh;
+//     overflow: auto;
+//     display: inline-flex;
+//     flex-direction: column;
+//     position: relative;
+//     right: 0;
+//     top: 0;
+
+//     &__title {
+//         font-size: 20px;
+//     }
+    
+//     &__register{
+//         width: 400px;
+//         margin-bottom: 20px;
+
+//         & .name {
+//             font-weight: bold;
+//             text-transform: capitalize;
+//         }
+
+//         & div {
+//             display: flex;
+//             flex-direction: row;
+//         }
+
+//         & div > .info {
+//             display: inline-block;
+//             width: 80px;
+//         }
+//     }
+// }

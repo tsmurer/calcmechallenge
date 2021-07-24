@@ -1,0 +1,11 @@
+.alert {
+    &__success-icon {
+        color: #2ce848;
+    }
+
+    &__error-icon {
+        color: #ff4d4d;
+    }
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,7 @@
+<div class="alert">
+  <span *ngIf="this.data === 'EXISTINGEMAIL'">Email já registrado!</span>
+  <span *ngIf="this.data === 'EXISTINGPHONE'">Telefone já registrado!</span>
+  <span *ngIf="this.data === 'SUCCESS'">Informações salvas!</span>
+  <mat-icon class="alert__success-icon" *ngIf="this.data === 'SUCCESS'">check</mat-icon>
+  <mat-icon class="alert__error-icon" *ngIf="this.data !== 'SUCCESS'">close</mat-icon>
+</div>

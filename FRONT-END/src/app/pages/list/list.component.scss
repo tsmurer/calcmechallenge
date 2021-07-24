@@ -1,0 +1,62 @@
+.list {
+
+
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+    overflow: auto;
+    background-color: #fff;
+
+    & a {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(-150%);
+    }
+
+
+}
+
+.table {
+    display: table;
+    min-width: 600px;
+
+
+
+    &__row:nth-child(even) {
+      background: #f2f2f2;
+    }
+}
+
+td, th {
+    padding: 10px 20px 10px 20px;
+}
+
+th.mat-sort-header-sorted {
+color: black;
+}
+
+
+  .name {
+    text-transform: capitalize;
+}
+
+.search {
+    width: 300px;
+    padding: 0;
+    transform: translateY(20%);
+}
+
+@media screen and (min-width: 910px) {
+    .list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+@media screen and (max-width: 910px) {
+
+}
